@@ -8,7 +8,9 @@ namespace Calculatrice
 {
     class Program
     {
-        
+
+
+
         static float SaisirFloat(string prompt)
         {
             string reponse;
@@ -20,6 +22,52 @@ namespace Calculatrice
 
         }
 
+
+        static void Menu()
+        {
+            bool quitter;
+           quitter = false;
+            string aurevoir;
+
+            while (quitter == false) { 
+           
+            string affichemenu;
+            string choixmenu;
+            affichemenu = " Bonjour, quelle opération souhaitez vous réaliser : + Additionner  - Soustraire  / Diviser * Multiplier  Q Pour quitter";
+            Console.WriteLine(affichemenu);
+            choixmenu = Console.ReadLine();
+            
+            if(choixmenu == "+")
+            {
+                Additionner();
+            }
+
+            if(choixmenu == "-")
+            {
+                Soustraire();
+            }
+            
+            if(choixmenu == "/" )
+            {
+                Diviser();
+            }
+
+            if (choixmenu == "*")
+            {
+                Multiplier();
+            }
+
+            if (choixmenu == "Q")
+                {
+                    quitter = true;
+                }
+           }
+            
+            aurevoir = "Quitter - Au revoir !";
+            Console.WriteLine(aurevoir);
+        }
+
+
         static void Additionner()
         {
 
@@ -28,8 +76,7 @@ namespace Calculatrice
             float nmbrb;
             string affichea;
             string afficheb;
-            string reponsea;
-            string reponseb;
+      
 
 
 
@@ -149,9 +196,11 @@ namespace Calculatrice
         {
             /* Pour faire fonctionner la fonction saluer juste noter Saluer();*/
             //Additionner();
-           // Soustraire();
-           //Multiplier();
-            Diviser();
+            // Soustraire();
+            //Multiplier();
+            //Diviser();
+
+            Menu();
 
         }
     }
