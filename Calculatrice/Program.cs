@@ -106,6 +106,31 @@ namespace Calculatrice
 
         }
 
+        static void Diviser()
+        {
+            float diviser;
+            float nmbrdiviser1;
+            float nmbrdiviser2;
+            string affichediviser1;
+            string affichediviser2;
+          
+            affichediviser1 = "Veuillez saisir le 1er nombre : ";
+            nmbrdiviser1 = SaisirFloat(affichediviser1);
+
+
+            affichediviser2 = "Veuillez saisir le 2nd nombre : ";
+            nmbrdiviser2= SaisirFloat(affichediviser2);
+
+
+
+            diviser = nmbrdiviser1 / nmbrdiviser2;
+            Console.WriteLine("La division vaut : " + diviser.ToString());
+
+
+
+
+        }
+
 
 
         static void Main(string[] args)
@@ -114,6 +139,7 @@ namespace Calculatrice
             //Additionner();
            // Soustraire();
             Multiplier();
+            Diviser();
 
         }
     }
