@@ -8,18 +8,7 @@ namespace Calculatrice
 {
     class Program
     {
-        static void saluer() //type: ne renvoie rien -> void
-        {
-            String msg;
-            String nom;
-            string affiche;
-            msg = "Veuillez saisir votre nom";
-            Console.WriteLine(msg);
-            nom = Console.ReadLine();
-            affiche = "Bonjour " + nom;
-            Console.WriteLine(affiche);
-        }
-
+        
         static float SaisirFloat(string prompt)
         {
             string reponse;
@@ -68,31 +57,32 @@ namespace Calculatrice
             float nmbr2;
             string affiche1;
             string affiche2;
-            string reponse1;
-            string reponse2;
+            //string reponse1;
+           // string reponse2;
 
             affiche1 = "Veuillez saisir le 1er nombre de votre soustration : ";
-            Console.WriteLine(affiche1);
-            reponse1 = Console.ReadLine();
-            nmbr1 = float.Parse(reponse1);
+            nmbr1 = SaisirFloat(affiche1);
+           /* reponse1 = Console.ReadLine();
+            nmbr1 = float.Parse(reponse1);*/
 
             affiche2 = "Veuillez saisir le 2nd nombre de votre soustration : ";
-            Console.WriteLine(affiche2);
-            reponse2 = Console.ReadLine();
-            nmbr2 = float.Parse(reponse2);
+           nmbr2 = SaisirFloat(affiche2);
+           /* reponse2 = Console.ReadLine();
+            nmbr2 = float.Parse(reponse2);*/
 
            soustraire = nmbr1 - nmbr2;
-            Console.WriteLine("La soustraction vaut : " + soustraire);
+            Console.WriteLine("La soustraction vaut : " + soustraire.ToString());
 
 
 
 
 
         }
+
         static void Main(string[] args)
         {
             /* Pour faire fonctionner la fonction saluer juste noter Saluer();*/
-            Additionner();
+            //Additionner();
             Soustraire();
 
 
