@@ -79,12 +79,41 @@ namespace Calculatrice
 
         }
 
+        static void Multiplier()
+        {
+            float multiplier;
+            float nmbr3;
+            float nmbr4;
+            string affichemultiplier1;
+            string affichemultiplier2;
+            //string reponse1;
+            // string reponse2;
+
+            affichemultiplier1 = "Veuillez saisir le 1er nombre : ";
+            nmbr3 = SaisirFloat(affichemultiplier1);
+         
+
+            affichemultiplier2 = "Veuillez saisir le 2nd nombre : ";
+            nmbr4 = SaisirFloat(affichemultiplier2);
+         
+
+            multiplier = nmbr3 * nmbr4;
+            Console.WriteLine("La multiplication vaut : " + multiplier.ToString());
+
+
+
+
+
+        }
+
+
+
         static void Main(string[] args)
         {
             /* Pour faire fonctionner la fonction saluer juste noter Saluer();*/
             //Additionner();
-            Soustraire();
-
+           // Soustraire();
+            Multiplier();
 
         }
     }
