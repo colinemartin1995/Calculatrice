@@ -114,9 +114,7 @@ namespace Calculatrice
             string affichediviser1;
             string affichediviser2;
 
-            bool opok;
-            opok = true;
-
+       
          
           
             affichediviser1 = "Veuillez saisir le 1er nombre : ";
@@ -126,23 +124,22 @@ namespace Calculatrice
             affichediviser2 = "Veuillez saisir le 2nd nombre : ";
             nmbrdiviser2= SaisirFloat(affichediviser2);
 
-            if (nmbrdiviser2 == 0)
+             while (nmbrdiviser2 == 0)
             {
                 Console.WriteLine("Ne pas diviser par 0 !");
-                opok = false;
 
                 affichediviser2 = "Veuillez saisir le 2nd nombre : ";
                 nmbrdiviser2 = SaisirFloat(affichediviser2);
+                    
 
             }
 
-
-            if (nmbrdiviser2 != 0)
-            {
+         
                 diviser = nmbrdiviser1 / nmbrdiviser2;
                 Console.WriteLine("La division vaut : " + diviser.ToString());
 
-            }
+          
+
 
         }
 
@@ -153,7 +150,7 @@ namespace Calculatrice
             /* Pour faire fonctionner la fonction saluer juste noter Saluer();*/
             //Additionner();
            // Soustraire();
-           // Multiplier();
+           //Multiplier();
             Diviser();
 
         }
